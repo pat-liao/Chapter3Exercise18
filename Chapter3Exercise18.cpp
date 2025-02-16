@@ -23,12 +23,12 @@ int main()
 
     amount = principal * pow((1+ (rate/(100*tcompound))),tcompound);                    //calculate amount using user values
 
-    cout << "\nInterest Rate: " << rate << "%"
+    cout << "\nInterest Rate: " << setw(17) << rate << "%"
         << std::fixed<< std::setprecision(2)
-        <<"\nTimes Compounded: " << tcompound
-        << "\nPrincipal: $" << principal
-        << "\nInterest: $" << amount - principal
-        << "\nAmount in Savings: $" << amount;                                          //display values
+        <<"\nTimes Compounded: " << setw(14) << tcompound
+        << "\nPrincipal:         $" << setw(12) << principal
+        << "\nInterest:          $" << setw(12) << amount - principal
+        << "\nAmount in Savings: $" << setw(12) << amount;                                          //display values
        
     return 0;
 }
